@@ -1,0 +1,28 @@
+<div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+  <div class="carousel-inner py-4">
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4" *ngFor="let image of images; let i = index">
+            <div class="card">
+              <img
+                [src]="image.isHovering ? image.hoverUrl : image.defaultUrl" (mouseenter)="onMouseOver(i)"
+                (mouseleave)="onMouseOut(i)"
+                class="card-img-top"
+                alt="Waterfall" style="width: 405px; height: 425px" />
+              <div class="card-body">
+                <h5 class="card-title">Chat</h5>
+                <hr>
+                <p class="card-text">
+                  Mammifère carnivore, de la famille des félidés, ayant de nombreuses espèces domestiques et
+                  quelques-unes sauvages.
+                </p>
+                <a class="btn btn-primary" (click)="onMouseOver(i)">Chat !</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
